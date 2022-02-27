@@ -6,7 +6,7 @@ target 'Todo' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  
+  pod 'CalendarKit'
   # Pods for Todo
 
 end
