@@ -12,6 +12,8 @@ class CalendarViewController:UIViewController, FSCalendarDelegate, FSCalendarDat
    
     @IBOutlet weak var calendarVC: FSCalendar!
     
+    @IBOutlet weak var calLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class CalendarViewController:UIViewController, FSCalendarDelegate, FSCalendarDat
         
         calendarVC.scrollEnabled = true
         calendarVC.scrollDirection = .horizontal
+        
+       
     }
     
 
