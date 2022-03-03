@@ -11,10 +11,12 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
+    @IBOutlet weak var todoText: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var myLabel: UILabel!
     
-    let models = ["안녕", "나의 todoList", "코드 성장하자", "화이팅"]
+    let models = ["✔️아침운동 30분 - 40분", "✔️비타민 챙겨먹기💊", "✔️프로그래밍 공부", "✔️Firebase 로그인 구현", "✔️FSCalendar 추가", "✔️TableViewController로 TodoList 만들기", "✔️밥먹기🍚", "✔️휴식", "✔️12시전에 잠들기"]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return models.count
@@ -35,6 +37,10 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+       
+        self.tableView.layer.cornerRadius = 12.0
+        self.myLabel.text = "\(models.count)개의 todoList가 있습니다."
+        
         
     }
     
